@@ -1,10 +1,11 @@
-import {lazy, Suspense} from "react";
+import {lazy} from "react";
 import {ErrorPage} from "../component/common/ErrorPage.tsx";
-import MainLayout from "../component/layouts/MainLayout.tsx";
-
-const Home = lazy(() => import('../feature/product/component/product.tsx'))
-const SignUp = lazy(() => import('../feature/auth/component/signup.tsx'))
-const SignIn = lazy(() => import('../feature/auth/component/signin.tsx'))
+import MainLayout from "../layouts/MainLayout.tsx";
+import AuthLayout from "../layouts/AuthLayout.tsx";
+const Home = lazy(() => import('../feature/product/product.tsx'))
+const SignUp = lazy(() => import('../feature/auth/register.tsx'))
+const SignIn = lazy(() => import('../feature/auth/login.tsx'))
+const ForgotPassword = lazy(() => import('../feature/auth/forgetPassword.tsx'))
 export const publicRoute = [
     {
         element: <MainLayout/>,
@@ -16,6 +17,7 @@ export const publicRoute = [
         ]
     },
     {
+        element: <AuthLayout/>,
         errorElement: <ErrorPage/>,
         children: [
             {
@@ -23,6 +25,9 @@ export const publicRoute = [
             },
             {
                 path: '/register', element: <SignUp/>
+            },
+            {
+                path: '/forgot-password', element: <ForgotPassword/>
             }
         ]
     }

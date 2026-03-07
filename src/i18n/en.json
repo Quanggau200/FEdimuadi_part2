@@ -1,0 +1,23 @@
+{
+  "LOGIN": {
+    "TITLE": "Sign In",
+    "DESC": "Welcome back! Please enter your information."
+  },
+  "SIGNUP": {
+    "TITLE": "Sign Up",
+    "DESC": "Welcome! Please enter your information to get started."
+  },
+  "LABEL": {
+    "FULLNAME": "Full Name",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "AGREEMENT": "I agree to the terms & conditions"
+  },
+  "HEADER": {
+    "TEXT_1": "Free shipping within 2km",
+    "TEXT_2": "Free returns",
+    "TEXT_3": "Return insurance",
+    "TEXT_4": "Authentic products"
+  }
+}

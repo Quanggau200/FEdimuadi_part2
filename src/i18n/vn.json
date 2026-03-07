@@ -1,0 +1,76 @@
+{
+  "LOGIN": {
+    "TITLE": "Đăng nhập",
+    "DESC": "Chào mừng trở lại! Vui lòng nhập thông tin của bạn."
+  },
+  "SIGNUP": {
+    "TITLE": "Đăng ký",
+    "DESC": "Chào mừng! Vui lòng nhập thông tin của bạn để bắt đầu."
+  },
+  "LABEL": {
+    "FULLNAME": "Họ và tên",
+    "EMAIL": "Email",
+    "REGISTER_SUCCESS":"Đăng kí tài khoản thành công",
+    "REGISTER_FAIL":"Đăng kí tài khoản thất bại",
+    "PLACEHOLDER_FULLNAME":"Nhập họ và tên",
+    "PLACEHOLDER_EMAIL":"Nhập email của bạn",
+    "PLACEHOLDER_PASSWORD":"Nhập mật khẩu",
+    "PLACEHOLDER_CONFIRM_PASSWORD":"Nhập lại mật khẩu",
+    "PASSWORD": "Mật khẩu",
+    "CONFIRM_PASSWORD": "Xác nhận mật khẩu",
+    "AGREEMENT": "Tôi đồng ý với ",
+    "AGREEMENT_LINK": "Điều khoản & Điều kiện",
+    "FORGET_PASSWORD": "Quên mật khẩu",
+    "RESET_PASSWORD_DESC":"Vui lòng nhập email của bạn để đặt lại mật khẩu.",
+    "REMEMBER_ME": "Ghi nhớ đăng nhập",
+    "SIGNIN_WITH_GOOGLE": "Đăng nhập với Google",
+    "SIGNIN_WITH_FACEBOOK": "Đăng nhập với Facebook",
+    "ALREADY_HAVE_ACCOUNT": "Bạn đã có tài khoản?",
+    "BACK":"Quay lại ",
+    "BACK_TO_LOGIN":"Quay lại đăng nhập",
+    "CONTINUE":"Tiếp tục",
+    "RESEND":"Gửi lại",
+    "VERIFICATION_CODE":"Mã xác minh",
+    "VERIFICATION_CODE_DESC":"Vui lòng nhập mã xác minh đã gửi đến email của bạn.",
+    "CREATE_NEW_PASSWORD":"Tạo mật khẩu mới",
+    "CREATE_NEW_PASSWORD_DESC":"Vui lòng nhập mật khẩu mới cho tài khoản của bạn.",
+    "SUCCESS":"Thành công",
+    "SUCCESS_DESC":"Mật khẩu của bạn đã được thay đổi thành công.",
+    "RESEND_CODE":"Gửi lại mã",
+    "RESEND_CODE_DESC":"Không nhận được mã?",
+    "REQUIRED_EMAIL":"Vui lòng nhập email của bạn",
+    "REQUIRED_PASSWORD":"Vui lòng nhập mật khẩu",
+    "REQUIRED_CONFIRM_PASSWORD":"Vui lòng nhập lại mật khẩu",
+    "CONFIRM":"Xác nhận",
+    "INVALID_EMAIL":"Vui lòng nhập email hợp lệ",
+    "PLACEHOLDER_SEARCH":"Tìm kiếm"
+  },
+  "HEADER": {
+    "FREE_SHIP": "Free ship 2km",
+    "FREE_RETURN": "Hoàn trả miễn phí",
+    "INSURANCE_RETURN": "Bảo an trả hàng",
+    "GENUINE_PRODUCTS": "Sản phẩm chính hãng"
+  },
+  "FOOTER":
+  {
+  "CUSTOMER_SUPPORT":"TRỢ GIÚP KHÁCH HÀNG",
+  "ABOUT_DIMUADI":"VỀ DIMUADI",
+  "FOLLOW_DIMUADI":"THEO DÕI DIMUADI",
+  "DOWNLOAD_APP":"TẢI APP DIMUADI",
+  "COMPANY_NAME":"CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ DỊCH VỤ D2C VIỆT NAM",
+  "ADDRESS":"Địa chỉ: Tầng 7, số 97-99 Láng Hạ, Đống Đa, Hà Nội",
+  "HOTLINE":"Hotline: 024 3217 1304 | Email: support@accesstrade.vn",
+  "MSDN":"MSDN: 0109327194 do Sở KH&ĐT TP. Hà Nội cấp 01/09/2020",
+  "HOW_TO_BUY":"Hướng Dẫn Mua Hàng",
+  "PAYMENT":"Thanh Toán",
+  "SHIPPING":"Vận Chuyển",
+  "RETURN_REFUND":"Trả Hàng & Hoàn Tiền",
+  "POLICY":"Chính Sách",
+  "ABOUT":"Giới Thiệu",
+  "PRIVACY_POLICY":"Chính Sách Bảo Mật",
+  "TERMS":"Điều Khoản",
+  "BRAND":"Chính Hãng",
+  "CONTACT":"Liên Hệ",
+  "EMAIL":"Email"
+  }
+}
