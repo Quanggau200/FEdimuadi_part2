@@ -13,20 +13,20 @@ import {
 import { FaFacebook } from "react-icons/fa6";
 import { useDispatch } from "react-redux";
 import { setCredentials } from "../auth/authSlice"
+import {handleFormError} from "../../util/handleFormErrorr"
 const SignIn = () => {
   const dispatch=useDispatch()
   const { t } = useTranslation();
-  const {message}=AppAnt.useApp();
   const navigate=useNavigate()
   const [login,{isLoading}]=useLoginMutation()
-
+  const [form] = Form.useForm()
   const onFinish= async(values:any)=>{
     try {
       const res=await login(values).unwrap();
-      dispatch(setCredentials({token:res.access_token}))
+      dispatch(setCredentials({token:res?.data?.access_token}))
       navigate("/")
-    } catch (error) {
-      message.error("Login failed")
+    } catch (error:any) {
+      handleFormError(error,form)
     }
   }
   return (
@@ -42,10 +42,12 @@ const SignIn = () => {
             </div>
 
             <Form
+              form={form}
               method="POST"
               className="space-y-5 px-3 "
               layout="vertical"
               requiredMark={false}
+              scrollToFirstError={{behavior:"smooth",block:"start"}}
                size="large"
               onFinish={onFinish}
             >
@@ -60,6 +62,9 @@ const SignIn = () => {
                   {
                     type:"email",
                     message:t("LABEL.INVALID_EMAIL")
+                  },
+                  {
+                     
                   }
                 ]}
               >
@@ -94,6 +99,7 @@ const SignIn = () => {
               <AppSubmit
               loading={isLoading}
                 htmlType="submit"
+                className="!h-12 !text-lg"
               >
                 {t("LOGIN.TITLE")}
               </AppSubmit>

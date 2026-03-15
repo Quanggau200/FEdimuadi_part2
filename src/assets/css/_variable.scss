@@ -1,0 +1,23 @@
+@theme {
+   --color-success: #44bd32;
+   --color-hover:#37a626;
+   --color-title:#6f7678;
+   --color-bg-title:#dddedf;
+   --color-bg-slider:#f8f8f9;
+   --color-title-dashboard:#81878a;
+   --color-dashboard:#5c6366;
+   --spacing-layout: 15px;
+   --spacing-layout-profile:18px;
+   --spacing-layout-profile-bottom:17px;
+   --line-height:26px;
+   --color-icon:#747B7E;
+}
+.ant-menu-item .icon-menu,.ant-dropdown-menu-item-icon {
+  color: var(--color-icon) !important;
+  transition: color 0.2s !important;
+}
+.ant-menu-item:hover .icon-menu,
+.ant-menu-item-selected .icon-menu
+,.ant-dropdown-menu-item:hover .ant-dropdown-menu-item-icon  {
+  color: var(--color-hover) !important;
+}

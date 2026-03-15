@@ -6,23 +6,22 @@ import { useTranslation } from "react-i18next";
 import { AppInput,AppPassword } from "../../component/common/appInput";
 import { AppCheckbox,AppButtonSignWith,AppSubmit } from "../../component/common/appButton";
 import { useRegisterMutation } from "../auth/authApi";
-import { App as AppAnt } from "antd";
 import { useDispatch } from "react-redux";
 import { setCredentials } from "../auth/authSlice";
+import {handleFormError} from "../../util/handleFormErrorr"
 const Signup = () => {
   const dispatch=useDispatch()
   const { t } = useTranslation();
   const [register,{isLoading}]=useRegisterMutation()
-  const {message}=AppAnt.useApp()
   const navigate=useNavigate()
+  const [form]=Form.useForm()
   const onSubmit=async(values:any)=>{
     try {
       const res=await register(values).unwrap();
-      message.success(t("LABEL.REGISTER_SUCCESS"))
-      dispatch(setCredentials({token:res.access_token}))
+      dispatch(setCredentials({token:res.data.access_token}))
       navigate("/")
-    } catch (error) {
-      message.error(t("LABEL.REGISTER_FAIL"))
+    } catch (error:any) {
+      handleFormError(error,form)
     }
   }
   return (
@@ -38,6 +37,11 @@ const Signup = () => {
 
           {/* Form */}
           <Form
+            form={form}
+            scrollToFirstError={{
+              behavior:"smooth",
+              block:"start"
+            }}
             name="register"
             layout="vertical"
             initialValues={{ remember: true }}
@@ -54,7 +58,7 @@ const Signup = () => {
               }
               name="username"
               rules={[
-                { required: true, message: "Please input your full name!" },
+                { required: true, message: t("SIGNUP.REQUIRED_USRENAME") },
               ]}
             >
               <AppInput placeholder={t("LABEL.PLACEHOLDER_FULLNAME")} />
@@ -68,8 +72,8 @@ const Signup = () => {
               }
               name="email"
               rules={[
-                { type: "email", message: "The input is not valid E-mail!" },
-                { required: true, message: "Please input your E-mail!" },
+                { type: "email", message: t("SIGNUP.EMAIL_INVALID") },
+                { required: true, message: t("LABEL.REQUIRED_EMAIL") },
               ]}
             >
               <AppInput placeholder={t("LABEL.PLACEHOLDER_EMAIL")} />
@@ -83,7 +87,7 @@ const Signup = () => {
               }
               name="password"
               rules={[
-                { required: true, message: "Please input your password!" },
+                { required: true, message:t("LABEL.REQUIRED_PASSWORD")  },
               ]}
             >
               <AppPassword placeholder={t("LABEL.PLACEHOLDER_PASSWORD")} />
@@ -98,14 +102,14 @@ const Signup = () => {
               name="confirm"
               dependencies={["password"]}
               rules={[
-                { required: true, message: "Please confirm your password!" },
+                { required: true, message: t("LABEL.REQUIRED_CONFIRM_PASSWORD")},
                 ({ getFieldValue }) => ({
                   validator(_, value) {
                     if (!value || getFieldValue("password") === value) {
                       return Promise.resolve();
                     }
                     return Promise.reject(
-                      new Error("The passwords do not match!"),
+                      new Error(t("SIGNUP.CONFIRM_PASSWORD_INVALID")),
                     );
                   },
                 }),
@@ -123,18 +127,19 @@ const Signup = () => {
                   validator: (_, value) =>
                     value
                       ? Promise.resolve()
-                      : Promise.reject(new Error("Should accept agreement")),
+                      : Promise.reject(new Error(t("LABEL.AGREE_TO_TERM"))),
                 },
               ]}
             >
               <AppCheckbox className="text-gray-600">
                 {t("LABEL.AGREEMENT")}{" "}
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="!text-success font-semibold hover:underline"
                 >
                   {t("LABEL.AGREEMENT_LINK")}
-                </a>
+                </Link>
+              
               </AppCheckbox>
             </Form.Item>
             {/* Submit Button */}
@@ -144,6 +149,7 @@ const Signup = () => {
                 htmlType="submit"
                 block
                 loading={isLoading}
+                className="!h-12 !text-lg"
               >
                 {t("SIGNUP.TITLE")}
               </AppSubmit>

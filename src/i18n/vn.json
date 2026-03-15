@@ -5,9 +5,18 @@
   },
   "SIGNUP": {
     "TITLE": "Đăng ký",
-    "DESC": "Chào mừng! Vui lòng nhập thông tin của bạn để bắt đầu."
+    "DESC": "Chào mừng! Vui lòng nhập thông tin của bạn để bắt đầu.",
+    "EMAIL_INVALID":"Email không hợp lệ",
+    "EMAIL_ALREADY_EXISTS":"Email đã tồn tại",
+    "USERNAME_ALREADY_EXISTS":"Tên đăng nhập đã tồn tại",
+    "PASSWORD_INVALID":"Mật khẩu không hợp lệ",
+    "CONFIRM_PASSWORD_INVALID":"Mật khẩu không khớp",
+    "REGISTER_SUCCESS":"Đăng kí tài khoản thành công",
+    "REGISTER_FAIL":"Đăng kí tài khoản thất bại",
+    "REQUIRED_USRENAME":"Vui lòng nhập tên đăng nhập "
   },
   "LABEL": {
+    "TITLE":"Dimuadi",
     "FULLNAME": "Họ và tên",
     "EMAIL": "Email",
     "REGISTER_SUCCESS":"Đăng kí tài khoản thành công",
@@ -43,12 +52,23 @@
     "REQUIRED_CONFIRM_PASSWORD":"Vui lòng nhập lại mật khẩu",
     "CONFIRM":"Xác nhận",
     "INVALID_EMAIL":"Vui lòng nhập email hợp lệ",
-    "PLACEHOLDER_SEARCH":"Tìm kiếm"
+    "PLACEHOLDER_SEARCH":"Tìm kiếm",
+    "AGREE_TO_TERM":"Vui lòng đồng ý điều khoản",
+    "PROFILE":"Thông tin cá nhân",
+    "ACCOOUNT":"Thiết lập tài khoản",
+    "INFOR_PROFILE":" Thông tin cá nhân",
+    "TEXT_ACCOUNT":"Tài khoản",
+    "ADD_ADDRESS":"Thêm địa chỉ",
+    "EMAIL_PROFILE":"Địa chỉ email",
+    "VOTE":"Đánh giá của tôi",
+    "STORE_MANAGER":"Quản lý đơn hàng",
+    "CASH_MAGERMENT":"Thông tin thanh toán",
+    "LOGOUT":"Đăng xuất"
   },
   "HEADER": {
     "FREE_SHIP": "Free ship 2km",
     "FREE_RETURN": "Hoàn trả miễn phí",
-    "INSURANCE_RETURN": "Bảo an trả hàng",
+    "INSURANCE_RETURN": "Đồng kiểm",
     "GENUINE_PRODUCTS": "Sản phẩm chính hãng"
   },
   "FOOTER":

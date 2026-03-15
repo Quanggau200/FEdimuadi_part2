@@ -1,12 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
+import type { Profile } from '../../types/types';
 interface AuthState{
   
    token:string | null   
+   profile:Profile |null
 }
 const initialState:AuthState={
   
-    token:null
+    token:null,
+    profile:null
 }
 const authSlice = createSlice({
   name: 'auth',
@@ -16,15 +19,18 @@ const authSlice = createSlice({
       state,
       action: PayloadAction<{token: string }>
     ) => {
-      console.log("Dữ liệu dispatch vào Redux:", action.payload);
       state.token = action.payload.token;
+    },
+    setProfile: (state, action: PayloadAction<Profile>) => { 
+      state.profile = action.payload;
     },
     logout: (state) => {
   
       state.token = null;
+      state.profile=null
     },
   },
 });
 
-export const { setCredentials, logout } = authSlice.actions;
+export const { setCredentials,setProfile,logout } = authSlice.actions;
 export default authSlice.reducer;

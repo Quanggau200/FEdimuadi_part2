@@ -85,7 +85,7 @@ const ForgotPasswordFlow = () => {
                 className="h-12 rounded-lg"
               />
             </Form.Item>
-            <AppSubmit type="primary" htmlType="submit">
+            <AppSubmit type="primary" htmlType="submit" className="!h-12 !text-lg">
               {t("LABEL.CONTINUE")}
             </AppSubmit>
           </Form>
@@ -107,7 +107,7 @@ const ForgotPasswordFlow = () => {
           >
             <AppOtpInput length={6} onChange={check} />
             <CountDown initialSeconds={10} onResend={check} />
-            <AppSubmit type="primary" htmlType="submit">
+                   <AppSubmit type="primary" htmlType="submit" className="!h-12 !text-lg">
               {t("LABEL.CONTINUE")}
             </AppSubmit>
           </Form>
@@ -156,7 +156,7 @@ const ForgotPasswordFlow = () => {
                 className="h-12 rounded-lg"
               />
             </Form.Item>
-            <AppSubmit type="primary" htmlType="submit">
+                 <AppSubmit type="primary" htmlType="submit" className="!h-12 !text-lg">
               {t("LABEL.CONFIRM")}
             </AppSubmit>
           </Form>
@@ -175,7 +175,7 @@ const ForgotPasswordFlow = () => {
           <Text className="text-gray-400 block mb-8 px-4 text-sm">
             {t("LABEL.SUCCESS_DESC")}
           </Text>
-          <AppSubmit type="primary">
+                 <AppSubmit type="primary" htmlType="submit" className="!h-12 !text-lg">
             <Link to="/login">{t("LABEL.BACK_TO_LOGIN")}</Link>
           </AppSubmit>
         </div>

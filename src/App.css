@@ -1,10 +1,13 @@
 @import "tailwindcss";
-
-
-
-@theme {
-   --color-success: #44bd32;
-   --color-hover:#37a626;
+@import "./assets/css/_variable.scss";
+.container
+{
+    max-width: 992px;
+}
+.ant-layout-sider-children
+{
+    background: white !important;
+    border:none !important;
 }
 body,
 html {
@@ -58,6 +61,7 @@ html {
     --color--price: #da4f25;
     --color-infor-voucher: #212121;
     --color--item--sale: #3d3f40;
+    --color-hover-profile:#daf2d6;
     --color--item--bought: #004c73;
     --color--footer--main: #dce3ec;
     --bs-primary-rgb: 13, 110, 253;

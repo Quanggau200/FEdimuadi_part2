@@ -39,11 +39,11 @@ export const AppButtonSignWith = ({className, ...props}:ButtonProps) => {
       />
     )
 }
-export const AppSubmit = ({ children, ...props }: ButtonProps) => {
+export const AppSubmit = ({ children, className,...props }: ButtonProps) => {
   return (
     <Button
       block
-      className={`!h-12 !text-white !rounded-xl !bg-success !border-none !text-lg !font-semibold !shadow-md !shadow-red-200 hover:!bg-hover !transition !duration-200 `}
+      className={`!text-white !rounded-xl !bg-success !border-none !font-semibold !shadow-md !shadow-red-200 hover:!bg-hover !transition !duration-200 ${className ?? ""} `}
       {...props}
     >
       {children}
